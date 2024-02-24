@@ -9,7 +9,7 @@ nltk
 tqdm
 PyYAML
 matplotlib
-torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+torch torchvision torchaudio
 boto3
 mypy-boto3-s3
 python-box==6.0.2
