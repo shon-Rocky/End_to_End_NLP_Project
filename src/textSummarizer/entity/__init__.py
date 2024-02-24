@@ -15,3 +15,10 @@ class DataValidationConfig:
     root_dir: Path  # Root directory for data validation
     STATUS_FILE: str  # File path for storing validation status
     ALL_REQUIRED_FILES: list  # List of all required files for validation
+
+
+@dataclass(frozen=True)
+class DataTransformationConfig:
+    root_dir: Path            # Root directory for data transformation
+    data_path: Path           # Path to the data directory
+    tokenizer_name: Path      # Path to the tokenizer

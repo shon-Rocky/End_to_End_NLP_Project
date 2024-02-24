@@ -1,6 +1,5 @@
 import os  # Module for interacting with the operating system
 from src.textSummarizer.logging import logger  # Importing logger for logging messages
-from pathlib import Path  # Module for working with file paths
 from src.textSummarizer.entity import DataValidationConfig  # Importing DataValidationConfig class
 
 

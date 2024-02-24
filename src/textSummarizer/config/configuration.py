@@ -1,7 +1,9 @@
 # Import necessary modules and classes
 from src.textSummarizer.constants import *  # Importing constants from the constants module
 from src.textSummarizer.utils.common import read_yaml, create_directories  # Importing utility functions
-from src.textSummarizer.entity import (DataIngestionConfig, DataValidationConfig)  # Importing entity classes
+from src.textSummarizer.entity import (DataIngestionConfig,
+                                       DataValidationConfig,
+                                       DataTransformationConfig)  # Importing entity classes
 
 
 class ConfigurationManager:
@@ -35,6 +37,8 @@ class ConfigurationManager:
         )
 
         return data_ingestion_config  # Return the DataIngestionConfig object
+    
+    
 
     # Method to get data validation configuration
     def get_data_validation_config(self) -> DataValidationConfig:
@@ -52,3 +56,19 @@ class ConfigurationManager:
         )
 
         return data_validation_config  # Return the DataValidationConfig object
+    
+    
+    
+        
+    def get_data_transformation_config(self) -> DataTransformationConfig:
+        config = self.config.data_transformation
+
+        create_directories([config.root_dir])
+
+        data_transformation_config = DataTransformationConfig(
+            root_dir=config.root_dir,
+            data_path=config.data_path,
+            tokenizer_name = config.tokenizer_name
+        )
+
+        return data_transformation_config
