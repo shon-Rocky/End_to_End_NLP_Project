@@ -1,11 +1,11 @@
-import os
-from box.exceptions import BoxValueError
-import yaml
-from src.textSummarizer.logging import logger
-from ensure import ensure_annotations
-from box import ConfigBox
-from pathlib import Path
-from typing import Any
+import os  # Module for interacting with the operating system
+from box.exceptions import BoxValueError  # Importing BoxValueError for handling errors related to Box
+import yaml  # Module for working with YAML files
+from src.textSummarizer.logging import logger  # Importing logger for logging messages
+from ensure import ensure_annotations  # Importing ensure_annotations decorator for type annotations
+from box import ConfigBox  # Importing ConfigBox for managing configurations using Box
+from pathlib import Path  # Module for working with file paths
+from typing import Any  # Importing Any for type hinting
 
 
 
